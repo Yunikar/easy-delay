@@ -1,4 +1,4 @@
-﻿# Easy Delay — decisions
+# Easy Delay — decisions
 
 Each entry: decision, then why. Open questions are listed separately at the end.
 

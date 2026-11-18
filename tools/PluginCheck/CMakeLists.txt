@@ -1,4 +1,4 @@
-﻿juce_add_gui_app(EasyDelayCheck
+juce_add_gui_app(EasyDelayCheck
     PRODUCT_NAME "EasyDelayCheck"
     COMPANY_NAME "YangAudio"
 )

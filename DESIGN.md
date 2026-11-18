@@ -40,3 +40,17 @@ These rules were written after a de-slop pass; keep them when touching the UI.
 
 - Knobs only move when the user moves them; no idle animation, no pulses.
 - Delay time changes glide (audio behaviour), the UI just follows the value.
+
+## Text and source encoding
+
+- Every tracked text file is UTF-8 **without** BOM.
+- Never rewrite text files with PowerShell 5.1 `Get-Content` / `Set-Content`: it
+  decodes UTF-8 as the system code page (GBK on this machine) and silently turns
+  Chinese into mojibake. Use the editor tools, or .NET `File.ReadAllText` /
+  `WriteAllText` with `UTF8Encoding($false)`.
+- `node tools/check-encoding.mjs` runs in CI and fails on invalid UTF-8, a BOM,
+  or mojibake characters.
+
+Reason: one pass through PowerShell corrupted `README.md`; the damage only
+showed up on GitHub, after the release had already been tagged.
+
