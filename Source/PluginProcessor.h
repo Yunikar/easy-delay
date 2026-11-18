@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include <juce_audio_processors/juce_audio_processors.h>
 #include <atomic>
@@ -6,7 +6,7 @@
 #include <vector>
 
 
-// Easy Delay 鈥?a musical delay that stays out of the host's delay compensation.
+// Easy Delay —a musical delay that stays out of the host's delay compensation.
 //
 // How it differs from an ordinary delay plugin:
 //   * It reports 0 samples of latency to the host, so Studio One (or any VST3
