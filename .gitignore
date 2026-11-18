@@ -1,0 +1,16 @@
+# Build output
+build/
+dist/
+
+# Vendored dependencies (fetched by tools/fetch-deps.ps1, not committed)
+third_party/
+
+# Editor / OS noise
+.vs/
+*.user
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Local publishing helper
+tools/publish.mjs
